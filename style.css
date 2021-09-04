@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    /* background-color: gray; */
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-rows: 30% auto;
+}
+
+.container-dark {
+    animation: dark 1s forwards;
+}
+
+@keyframes dark {
+    
+    100%{
+        color: white;
+        background-color: rgb(32, 33, 36);
+    }
+}
+
+.container-light {
+    animation: light 1s forwards;
+}
+
+@keyframes light {
+    
+    0% {
+        color: white;
+        background-color: rgb(32, 33, 36);
+    }
+    100%{
+        color: black;
+        background-color: white;
+    }
+}
+
+
+
+.theme-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theme-tile {
+    width: 90%;
+    height: 30%;
+    padding: 15px 30px;
+    border: 2px solid black;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.text {
+    width: 90%;
+}
+
+.switch {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-slider {
+    position: relative;
+    width: 40px;
+    height: 21px;
+    border: 2px solid black;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.slider {
+    position: absolute;
+    bottom: -0.5px;
+    right: 19px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.mode-on {
+    border: 2px solid white;
+    animation-name: turnOn;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    right: 20px;
+}
+
+@keyframes turnOn {
+    
+    0% {
+        right: 20px;
+    }
+
+    100% {
+        right: -1px;
+    }
+}
+
+.mode-off {
+    border: 2px solid black;
+    animation-name: turnOff;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    right: -1px;
+}
+
+@keyframes turnOff {
+    
+    0% {
+        right: -1px;
+    }
+
+    100% {
+        right: 19px;
+    }
+}
+
+.addGreen {
+    border: 2px solid white;
+    animation-name: colorGreen;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes colorGreen {
+
+    100% {
+        background-color:  rgb(0, 180, 0);
+    }
+}
+
+.removeGreen {
+    border: 2px solid black;
+    animation-name: colorWhite;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes colorWhite {
+
+    0% {
+        background-color:  rgb(0, 180, 0);
+    }
+
+    100% {
+        background-color:  white;
+    }
+}
+
+.lower-text {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+}
+
+.lower-text h1 {
+    margin: 10px;
+}
+
+.lower-text p {
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+}

@@ -14,7 +14,6 @@ body {
 .container {
     width: 100%;
     height: 100%;
-    /* background-color: gray; */
     background-color: whitesmoke;
     display: grid;
     grid-template-rows: 30% auto;
@@ -47,8 +46,6 @@ body {
         background-color: white;
     }
 }
-
-
 
 .theme-container {
     width: 100%;
@@ -188,3 +185,10 @@ body {
     padding: 10px;
     font-size: 20px;
 }
+
+@media (max-width: 520px) {
+    .theme-tile {
+       height: auto;
+       padding: 10px;
+    }
+  }
